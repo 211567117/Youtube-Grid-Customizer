@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube 行数设置</title>
+  <style>
+    body { width: 220px; padding: 15px; font-family: Arial; }
+    input { width: 60px; padding: 8px; margin: 10px 0; }
+    button { background: #ff0000; color: white; border: none; padding: 8px 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h3>每行显示数量</h3>
+  <input type="number" id="gridCount" min="1" max="12" value="3">
+  <button id="saveBtn">保存设置</button>
+  <p id="status"></p>
+  <script src="popup.js"></script>
+</body>
+</html>

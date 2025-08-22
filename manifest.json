@@ -1,0 +1,27 @@
+
+{
+  "manifest_version": 3,
+  "name": "YouTube 行数设置",
+  "version": "1.0",
+  "description": "YouTube网格布局设置,支持1-12展示",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "web_accessible_resources": [{
+    "resources": ["inject.js"],
+    "matches": ["*://*.youtube.com/*"]
+  }],
+  "icons": {
+    "128": "icon.png"
+  }
+
+}
